@@ -134,7 +134,11 @@ handler = 'com.dash.enrichdata.EnrichData.extractProductName';
 
 Use the UDFs in your SQL queries in Snowflake. For example:
 
-```
-SELECT *, get_country_name(CLIENTIP) as COUNTRY_NAME, get_city_name(CLIENTIP) as CITY_NAME, get_decoded_url(REQUEST) as DECODED_URL, extract_product_name(REQUEST) as PRODUCT_NAME from WEB_LOGS;
-
+```sql
+SELECT *, 
+get_country_name(CLIENTIP) as COUNTRY_NAME, 
+get_city_name(CLIENTIP) as CITY_NAME, 
+get_decoded_url(REQUEST) as DECODED_URL, 
+extract_product_name(REQUEST) as PRODUCT_NAME 
+FROM WEB_LOGS;
 ```
